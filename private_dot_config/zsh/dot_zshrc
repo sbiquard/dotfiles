@@ -1,0 +1,110 @@
+# .zshrc
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source ~/.local/share/zinit/zinit.git/zinit.zsh
+# autoload -Uz _zinit
+# (( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
+
+
+###---------- ZINIT ----------###
+
+zinit wait lucid light-mode for \
+  atinit"zicompinit; zicdreplay" \
+      zdharma-continuum/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
+  blockf atpull'zinit creinstall -q .' \
+      zsh-users/zsh-completions
+
+
+###---------- PROMPT ----------###
+
+# Set up the prompt
+autoload -Uz promptinit; promptinit
+#prompt adam1
+
+
+###---------- EXPORTS ----------###
+
+export BROWSER="firefox"
+export EDITOR="hx"
+export VISUAL="hx"
+export PATH="$HOME/.local/bin:$PATH"
+
+# TeX
+export PATH="$HOME/texlive/2023/bin/x86_64-linux:$PATH"
+export MANPATH="$HOME/texlive/2023/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="$HOME/texlive/2023/texmf-dist/doc/info:$INFOPATH"
+
+
+###---------- SOURCE ----------###
+
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/archive_extract.zsh
+source ~/.config/zsh/scripts.zsh
+
+# Rust cargo
+source ~/.cargo/env
+
+# Environment modules
+source /usr/share/modules/init/zsh
+
+
+###---------- HISTORY ----------###
+
+setopt histignorealldups sharehistory
+
+# Keep 10000 lines of history within the shell and save it to .zhistory:
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.config/zsh/.zhistory
+
+
+###---------- OTHER ----------###
+
+# Plugins and other stuff
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
+eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"
+
+# Use Intel oneAPI modules
+module use ~/intel-oneapi-modulefiles
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/sbiquard/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/sbiquard/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/sbiquard/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/sbiquard/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
