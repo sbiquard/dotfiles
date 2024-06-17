@@ -35,24 +35,26 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-completions
 
 
-###---------- PROMPT ----------###
+###---------- EXPORT ----------###
 
-# Set up the prompt
-autoload -Uz promptinit; promptinit
-#prompt adam1
+export PATH="$HOME/.local/bin:$PATH"
 
-
-###---------- EXPORTS ----------###
-
+# preferred software
 export BROWSER="firefox"
 export EDITOR="hx"
 export VISUAL="hx"
-export PATH="$HOME/.local/bin:$PATH"
 
 # TeX
 export PATH="$HOME/texlive/2023/bin/x86_64-linux:$PATH"
 export MANPATH="$HOME/texlive/2023/texmf-dist/doc/man:$MANPATH"
 export INFOPATH="$HOME/texlive/2023/texmf-dist/doc/info:$INFOPATH"
+
+
+###---------- PROMPT ----------###
+
+# Set up the prompt
+autoload -Uz promptinit; promptinit
+#prompt adam1
 
 
 ###---------- SOURCE ----------###
@@ -67,6 +69,9 @@ source ~/.cargo/env
 # Environment modules
 source /usr/share/modules/init/zsh
 
+# linuxbrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 
 ###---------- HISTORY ----------###
 
@@ -80,11 +85,13 @@ HISTFILE=~/.config/zsh/.zhistory
 
 ###---------- OTHER ----------###
 
-# Plugins and other stuff
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Plugins
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
+
+# jj completions
+source <(jj util completion zsh)
 
 # Use Intel oneAPI modules
 module use ~/intel-oneapi-modulefiles
