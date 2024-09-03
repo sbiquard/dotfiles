@@ -54,7 +54,7 @@ export INFOPATH="$HOME/texlive/2023/texmf-dist/doc/info:$INFOPATH"
 
 # Set up the prompt
 autoload -Uz promptinit; promptinit
-#prompt adam1
+# prompt adam1
 
 
 ###---------- SOURCE ----------###
@@ -72,6 +72,8 @@ source /usr/share/modules/init/zsh
 # linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# atuin
+. "$HOME/.atuin/bin/env"
 
 ###---------- HISTORY ----------###
 
@@ -85,13 +87,18 @@ HISTFILE=~/.config/zsh/.zhistory
 
 ###---------- OTHER ----------###
 
+# contains alacritty completions
+fpath+=~/.config/zsh/.zsh_functions
+
 # Plugins
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
 
-# jj completions
+# Completions
+source <(fzf --zsh)
 source <(jj util completion zsh)
+eval "$(uv generate-shell-completion zsh)"
 
 # Use Intel oneAPI modules
 module use ~/intel-oneapi-modulefiles
@@ -115,3 +122,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+#. "$HOME/.cargo/env"

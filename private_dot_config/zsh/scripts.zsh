@@ -22,7 +22,7 @@ _prepend_pythonpath()
 
 load_toast_intel()
 {
-    dir=~/work/software/toast_intel
+    dir=~/work/software/toast-intel
     _prepend_paths $dir
     pyenv activate toast_intel
     _prepend_pythonpath $dir
@@ -52,7 +52,7 @@ cmbenv()
 
 load_toast()
 {
-    dir=~/work/software/toastdev
+    dir=~/work/software/toast-gcc
     _prepend_paths $dir
     pyenv activate toastdev
     _prepend_pythonpath $dir
@@ -68,7 +68,7 @@ hub_jz()
     ssh -D localhost:9080 -N -f apcssh
 
     # Open firefox with jz profile
-    firefox -p jz jupyterhub.idris.fr &
+    firefox -p jz &
 }
 
 
