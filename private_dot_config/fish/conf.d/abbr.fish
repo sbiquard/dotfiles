@@ -13,3 +13,6 @@ abbr -a l ls -lah
 abbr -a lsa ls -lah
 abbr -a la ls -lAh
 abbr -a ll ls -lh
+
+# default to tectonic V2 CLI
+abbr -a tectonic tectonic -X
