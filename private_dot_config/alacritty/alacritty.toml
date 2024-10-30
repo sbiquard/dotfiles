@@ -1,5 +1,3 @@
-live_config_reload = true
-
 [bell]
 animation = "EaseOutExpo"
 duration = 0
@@ -56,22 +54,22 @@ shape = "Block"
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 13
 
 [font.bold]
-family = "IosevkaTerm Nerd Font"
-style = "Bold"
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
 
 [font.glyph_offset]
 x = 0
 y = 0
 
 [font.italic]
-family = "IosevkaTerm Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
-style = "Regular"
+family = "JetBrainsMono Nerd Font"
+style = "SemiLight"
 
 [font.offset]
 x = 0
@@ -87,8 +85,8 @@ mouse = "Middle"
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
-[shell]
-program = "/usr/bin/zsh"
+[terminal.shell]
+program = "/usr/bin/fish"
 
 [window]
 decorations = "full"
@@ -96,9 +94,14 @@ dynamic_title = true
 startup_mode = "Windowed"
 
 [window.dimensions]
-columns = 160
-lines = 80
+columns = 80
+lines = 24
 
 [window.padding]
 x = 4
 y = 4
+
+[general]
+live_config_reload = true
+
+[terminal]
