@@ -3,5 +3,5 @@ function load_toast
     _prepend_paths $dir
     pyenv activate toastdev
     _prepend_pythonpath $dir
-    load_ssparse
+    # load_ssparse
 end
