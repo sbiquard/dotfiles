@@ -7,3 +7,8 @@ auto-format = true
 command = "ruff"
 args = ["server"]
 
+[language-server.taplo.config]
+# Workaround for nonsense of being nonfunctional outside git directories
+# (https://github.com/helix-editor/helix/issues/3897#issuecomment-2361674437)
+root_dir = [".git", "*.toml"]
+
