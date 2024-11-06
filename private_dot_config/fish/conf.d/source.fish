@@ -20,3 +20,6 @@ jj util completion fish | source
 # uv completions
 uv generate-shell-completion fish | source
 uvx --generate-shell-completion fish | source
+
+# prompt
+starship init fish | source
