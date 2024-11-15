@@ -1,4 +1,4 @@
-function load_toast_intel
+function load_toast
     set -l dir ~/work/software/pair-diff/toast
     _prepend_paths $dir
     _prepend_pythonpath $dir
@@ -7,14 +7,15 @@ function load_toast_intel
 end
 
 function load_mappraiser
-    set -l dir ~/work/software/pair-diff/mappraiser
-    _prepend_paths $dir
-    _prepend_pythonpath $dir
+    set -l install_dir ~/work/software/pair-diff/mappraiser
+    echo "Mappraiser install location is '$install_dir'"
+    set -gx MAPPRAISER_ROOT $install_dir
+    _prepend_paths $install_dir
+    _prepend_pythonpath $install_dir
 end
 
 function pairdiff_env
     pyenv activate pair-diff
-    module load compiler debugger mpi mkl
-    load_toast_intel
+    load_toast
     load_mappraiser
 end
