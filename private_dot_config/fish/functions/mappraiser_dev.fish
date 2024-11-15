@@ -1,4 +1,4 @@
-function load_mappraiser
+function mappraiser_dev
     set -l install_dir ~/work/software/mappraiser
     echo "Mappraiser install location is '$install_dir'"
     set -gx MAPPRAISER_ROOT $install_dir
@@ -9,11 +9,4 @@ function load_mappraiser
     echo "Activating virtual environment at '$venv_dir'"
     source $venv_dir/bin/activate.fish
     # export PREALPS_ROOT="/home/sbiquard/work/repos/preAlps"
-end
-
-
-function mappraiser_dev
-    module load compiler mpi mkl
-    echo "Loading Mappraiser"
-    load_mappraiser
 end
