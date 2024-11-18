@@ -15,7 +15,9 @@ function load_mappraiser
 end
 
 function pairdiff_env
-    pyenv activate pair-diff
+    set -l venv_dir ~/work/pairdiff/simu-sat/.venv
+    echo "Activating virtual environment at '$venv_dir'"
+    source $venv_dir/bin/activate.fish
     load_toast
     load_mappraiser
 end
