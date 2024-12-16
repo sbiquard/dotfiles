@@ -12,3 +12,21 @@ args = ["server"]
 # (https://github.com/helix-editor/helix/issues/3897#issuecomment-2361674437)
 root_dir = [".git", "*.toml"]
 
+[[language]]
+name = "markdown"
+file-types = [
+  "md",
+  "qmd", # cover quarto files too
+  "livemd",
+  "markdown",
+  "mdx",
+  "mkd",
+  "mkdn",
+  "mdwn",
+  "mdown",
+  "markdn",
+  "mdtxt",
+  "mdtext",
+  "workbook",
+  { glob = "PULLREQ_EDITMSG" },
+]
