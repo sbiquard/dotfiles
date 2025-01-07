@@ -1,0 +1,51 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+
+Host nersc perlmutter saul
+  HostName perlmutter.nersc.gov
+
+Host perlmutter*.nersc.gov saul*.nersc.gov dtn*.nersc.gov *.nersc.gov
+  User sbiquard
+  LogLevel QUIET
+  IdentityFile ~/.ssh/nersc
+  IdentitiesOnly yes
+  ForwardAgent yes
+
+# perlmutter compute nodes
+Host nid??????
+  User sbiquard
+  LogLevel QUIET
+  IdentityFile ~/.ssh/nersc
+  StrictHostKeyChecking no
+  ControlMaster auto
+  ControlPath ~/.ssh/cm/%C.compute.sock
+  ProxyJump perlmutter.nersc.gov
+  Hostname %h
+
+Host dante
+  HostName apcdante.in2p3.fr
+  User biquard
+  ProxyJump apcssh
+  SetEnv TERM=xterm-256color
+
+Host apcssh
+  HostName apcssh01.in2p3.fr
+  User biquard
+  SetEnv TERM=xterm-256color
+
+Host jean-zay jz
+  Hostname jean-zay.idris.fr
+  User usl22vm
+  ProxyJump apcssh
+  SetEnv TERM=xterm-256color
+
+Host nobel
+  Hostname %h.princeton.edu
+  User sb1860
+
+Host simons1
+  Hostname %h.princeton.edu
+  User sbiquard
+  ProxyJump nobel
+  ControlPath ~/.ssh/control-%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
