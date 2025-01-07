@@ -11,7 +11,7 @@
   "base_keymap": "VSCode",
   "theme": {
     "mode": "system",
-    "dark": "One Dark",
+    "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte"
   },
   "ui_font_family": "Ubuntu Sans",

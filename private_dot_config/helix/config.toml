@@ -1,4 +1,5 @@
-theme = "material_darker"
+theme = "catppuccin_mocha"
+# theme = "catppuccin_latte"
 
 [editor]
 line-number = "relative"
