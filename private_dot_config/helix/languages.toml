@@ -48,3 +48,11 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 # Workaround for nonsense of being nonfunctional outside git directories
 # (https://github.com/helix-editor/helix/issues/3897#issuecomment-2361674437)
 root_dir = [".git", "*.toml"]
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+
+[language-server.tinymist]
+command = "tinymist"
+config = { exportPdf = "onSave", formatterMode = "typstyle" }
