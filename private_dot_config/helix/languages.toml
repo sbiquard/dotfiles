@@ -21,6 +21,7 @@ diagnosticMode = "openFilesOnly"
 command = "ruff"
 args = ["server"]
 
+
 [[language]]
 name = "markdown"
 file-types = [
@@ -40,6 +41,7 @@ file-types = [
   { glob = "PULLREQ_EDITMSG" },
 ]
 
+
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
@@ -49,6 +51,7 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 # (https://github.com/helix-editor/helix/issues/3897#issuecomment-2361674437)
 root_dir = [".git", "*.toml"]
 
+
 [[language]]
 name = "typst"
 language-servers = ["tinymist"]
@@ -56,3 +59,16 @@ language-servers = ["tinymist"]
 [language-server.tinymist]
 command = "tinymist"
 config = { exportPdf = "onSave", formatterMode = "typstyle" }
+
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
