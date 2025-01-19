@@ -1,9 +1,6 @@
 # rust cargo
 source ~/.cargo/env.fish
 
-# pyenv
-pyenv init - | source
-
 # zoxide
 zoxide init fish | source
 
