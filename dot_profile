@@ -3,16 +3,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
+# PATH
+export PATH=$HOME/.local/bin:$PATH
+
 # Cargo
 export CARGO_HOME="$HOME/.cargo"
 
 # Homebrew
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-
 # TeX Live
 export PATH=~/texlive/2023/bin/x86_64-linux:$PATH
 export MANPATH=~/texlive/2023/texmf-dist/doc/man:$MANPATH
 export INFOPATH=~/texlive/2023/texmf-dist/doc/info:$INFOPATH
+
