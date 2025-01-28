@@ -28,7 +28,7 @@ Host dante
   SetEnv TERM=xterm-256color
 
 Host apcssh
-  HostName apcssh01.in2p3.fr
+  HostName apcssh.in2p3.fr
   User biquard
   SetEnv TERM=xterm-256color
 
