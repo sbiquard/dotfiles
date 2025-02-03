@@ -7,38 +7,68 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  // UI settings
   "base_keymap": "VSCode",
+
+  // Themes
   "theme": {
     "mode": "system",
     "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte"
   },
+
+  // Fonts
   "ui_font_family": "Ubuntu Sans",
-  "ui_font_size": 14,
-  "buffer_font_family": "JetBrains Mono",
-  "buffer_font_size": 15,
-  "buffer_font_weight": 300,
-  "format_on_save": "off",
+  "ui_font_size": 20,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 22,
+  "buffer_line_height": "standard",
+
+  // Other UI settings
+  "scrollbar": { "cursors": false },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+
+  // Project panel
+  "project_panel": { "entry_spacing": "standard" },
+
+  // Copilot settings
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    },
+    "version": "2"
+  },
 
   // Terminal settings
   "terminal": {
-    "font_family": "JetBrains Mono",
-    "font_size": 14,
-    "font_weight": 300,
-    "env": { "TERM": "xterm-256color" },
+    "line_height": "standard",
+    "env": {
+      "TERM": "xterm-256color",
+      "EDITOR": "zed --wait" // use zed as the editor
+    },
     "shell": { "program": "fish" },
     "detect_venv": {
       "on": { "activate_script": "fish" }
     }
   },
 
+  // Editor settings
+  "format_on_save": "off",
+
+  // Syntax highlighting
   "file_types": {
     "CMake": ["CMakeLists.txt"], // this should not be necessary
     "Markdown": ["qmd"] // recognize quarto files as markdown
   },
 
-  // Python settings
+  // Language settings
   "languages": {
     "Python": {
       "formatter": [
@@ -62,9 +92,6 @@
   "lsp": {
     "basedpyright": {
       "settings": {
-        "python": {
-          "pythonPath": ".venv/bin/python"
-        },
         "basedpyright": {
           "disableOrganizeImports": true
         },
@@ -93,11 +120,9 @@
     }
   },
 
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
+  // Disable telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   }
 }
