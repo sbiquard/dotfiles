@@ -18,9 +18,9 @@
 
   // Fonts
   "ui_font_family": "Ubuntu Sans",
-  "ui_font_size": 20,
+  "ui_font_size": 14,
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 22,
+  "buffer_font_size": 15,
   "buffer_line_height": "standard",
 
   // Other UI settings
@@ -65,7 +65,8 @@
   // Syntax highlighting
   "file_types": {
     "CMake": ["CMakeLists.txt"], // this should not be necessary
-    "Markdown": ["qmd"] // recognize quarto files as markdown
+    "Markdown": ["qmd"], // recognize quarto files as markdown
+    "Shell Script": ["slurm"]
   },
 
   // Language settings
