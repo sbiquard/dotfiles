@@ -4,6 +4,7 @@ function load_toast
     _prepend_pythonpath $dir
     # TOAST now compatible with latest SuiteSparse
     # load_ssparse
+    set -gx TOAST_ROOT $dir
 end
 
 function load_mappraiser
