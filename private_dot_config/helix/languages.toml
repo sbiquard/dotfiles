@@ -1,3 +1,7 @@
+# ------
+# Python
+# ------
+
 [[language]]
 name = "python"
 language-servers = ["basedpyright", "ruff"]
@@ -21,6 +25,9 @@ diagnosticMode = "openFilesOnly"
 command = "ruff"
 args = ["server"]
 
+# --------
+# Markdown
+# --------
 
 [[language]]
 name = "markdown"
@@ -41,6 +48,9 @@ file-types = [
   { glob = "PULLREQ_EDITMSG" },
 ]
 
+# ----
+# TOML
+# ----
 
 [[language]]
 name = "toml"
@@ -51,6 +61,9 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 # (https://github.com/helix-editor/helix/issues/3897#issuecomment-2361674437)
 root_dir = [".git", "*.toml"]
 
+# -----
+# Typst
+# -----
 
 [[language]]
 name = "typst"
@@ -58,8 +71,11 @@ language-servers = ["tinymist"]
 
 [language-server.tinymist]
 command = "tinymist"
-config = { exportPdf = "onSave", formatterMode = "typstyle" }
+config = { exportPdf = "onType", formatterMode = "typstyle" }
 
+# ----
+# YAML
+# ----
 
 [[language]]
 name = "yaml"
