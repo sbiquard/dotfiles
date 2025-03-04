@@ -8,6 +8,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 # Cargo
 export CARGO_HOME="$HOME/.cargo"
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Homebrew
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
@@ -17,3 +18,4 @@ export PATH=~/texlive/2023/bin/x86_64-linux:$PATH
 export MANPATH=~/texlive/2023/texmf-dist/doc/man:$MANPATH
 export INFOPATH=~/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
+. "$HOME/.cargo/env"

@@ -1,6 +1,3 @@
-# rust cargo
-source ~/.cargo/env.fish
-
 # zoxide
 zoxide init fish | source
 
