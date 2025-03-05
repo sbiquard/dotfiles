@@ -3,6 +3,6 @@ function hub_jz
     # assumes host 'apcssh' is configured in .ssh/config
     ssh -D localhost:9080 -N -f apcssh
 
-    # Open firefox with jz profile
-    firefox -p jz &
+    # Open browser with jz profile
+    librewolf -p jz &
 end
