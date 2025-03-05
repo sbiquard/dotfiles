@@ -1,3 +1,3 @@
 # preferred software
 set -gx EDITOR hx
-set -gx BROWSER firefox
+set -gx BROWSER librewolf
