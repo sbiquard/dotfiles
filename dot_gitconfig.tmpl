@@ -1,0 +1,41 @@
+[user]
+	name = Simon Biquard
+	email = {{ .gitemail }}
+	signingkey = {{ .gitsigningkey }}
+[core]
+	editor = hx
+[init]
+	defaultbranch = main
+[commit]
+	gpgsign = true
+	verbose = true
+[tag]
+	gpgSign = true
+	sort = version:refname
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[pull]
+	rebase = true
+# machine-specific
+{{- if eq .chezmoi.hostname "tour-simon-camille" }}
+[credential]
+	credentialStore = gpg
+	helper = /usr/local/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+{{- end }}
