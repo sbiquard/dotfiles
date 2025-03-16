@@ -21,4 +21,7 @@ function pairdiff_env
     source $venv_dir/bin/activate.fish
     load_toast
     load_mappraiser
+    {{- if eq .chezmoi.hostname "tour-simon-camille" }}
+    module load mpi
+    {{- end }}
 end
