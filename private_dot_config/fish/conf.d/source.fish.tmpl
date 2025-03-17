@@ -2,7 +2,7 @@
 zoxide init fish | source
 
 # environment modules
-source /usr/share/{{ .envmodules }}/init/fish
+source {{ .modulespath }}/init/fish
 {{- if eq .chezmoi.hostname "apcnb2205" }}
 module use ~/intel-oneapi-modulefiles
 {{- end }}
