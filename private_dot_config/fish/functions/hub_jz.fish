@@ -4,5 +4,5 @@ function hub_jz
     ssh -D localhost:9080 -N -f apcssh
 
     # Open browser with jz profile
-    $BROWSER -p jz &
+    firefox -p jz &
 end
