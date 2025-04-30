@@ -5,7 +5,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.pixi/bin:$PATH
 
 # Cargo
 export CARGO_HOME="$HOME/.cargo"
