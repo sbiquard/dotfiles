@@ -7,13 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "icon_theme": "Material Icon Theme",
   "base_keymap": "VSCode",
 
   // Themes
   "theme": {
     "mode": "system",
     "dark": "Catppuccin Frappé - No Italics",
+    "light": "Catppuccin Latte"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "dark": "Catppuccin Frappé",
     "light": "Catppuccin Latte"
   },
 
@@ -39,7 +43,7 @@
   "project_panel": { "entry_spacing": "standard" },
 
   // Copilot settings
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3-7-sonnet"
