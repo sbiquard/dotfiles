@@ -17,8 +17,8 @@
   },
   "icon_theme": {
     "mode": "system",
-    "dark": "Catppuccin Frappé",
-    "light": "Catppuccin Latte"
+    "dark": "Colored Zed Icons Theme Dark",
+    "light": "Colored Zed Icons Theme Light"
   },
 
   // Fonts
