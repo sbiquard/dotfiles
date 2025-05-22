@@ -1,5 +1,11 @@
 # Read more about SSH config files: https://linux.die.net/man/5/ssh_config
 
+Host souk
+  HostName universe.souk.ac.uk
+  User sbiquard
+  AddKeysToAgent yes
+  ForwardAgent yes
+
 Host nersc perlmutter saul
   HostName perlmutter.nersc.gov
 
