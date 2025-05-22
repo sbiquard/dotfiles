@@ -42,6 +42,11 @@
   // Project panel
   "project_panel": { "entry_spacing": "standard" },
 
+  // Minimap
+  "minimap": {
+    "show": "auto"
+  },
+
   // Copilot settings
   "agent": {
     "default_model": {
