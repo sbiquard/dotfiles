@@ -4,6 +4,7 @@
 	signingkey = {{ .gitsigningkey }}
 [core]
 	editor = hx
+	pager = delta
 [init]
 	defaultbranch = main
 [commit]
@@ -38,3 +39,9 @@
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 {{- end }}
+[interactive]
+        diffFilter = delta --color-only
+[delta]
+        navigate = true
+[merge]
+        conflictStyle = zdiff3
