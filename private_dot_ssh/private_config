@@ -35,6 +35,17 @@ Host dante
 
 Host apcssh
   HostName apcssh.in2p3.fr
+
+Host apcssh1
+  HostName apcssh01.in2p3.fr
+
+Host apcssh2
+  HostName apcssh02.in2p3.fr
+
+Host apcssh3
+  HostName apcssh03.in2p3.fr
+
+Host apcssh*.in2p3.fr
   User biquard
   SetEnv TERM=xterm-256color
 
