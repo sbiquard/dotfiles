@@ -1,5 +1,5 @@
 font-size = 13
-window-height = 40
-window-width = 152
+window-height = 32
+window-width = 120
 command = /usr/bin/fish --interactive
 theme = dark:Catppuccin Frappe,light:Catppuccin Latte
