@@ -24,7 +24,8 @@
   "buffer_font_size": 17,
   "buffer_font_weight": 300,
   "buffer_line_height": "standard",
-  "agent_font_size": 17,
+  "agent_buffer_font_size": 17,
+  "agent_ui_font_size": 17,
 
   // Control which items are shown/hidden in the title bar
   "title_bar": {
@@ -95,15 +96,9 @@
         "..."
       ],
       "formatter": [
+        { "code_action": "source.organizeImports.ruff" },
+        { "code_action": "source.fixAll.ruff" },
         {
-          // Auto-fix and organize imports with ruff
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
-        {
-          // Format with ruff
           "language_server": {
             "name": "ruff"
           }
