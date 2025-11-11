@@ -19,13 +19,13 @@
 
   // Fonts
   "ui_font_family": ".SystemUIFont",
-  "ui_font_size": 17,
+  "ui_font_size": 15,
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 17,
+  "buffer_font_size": 15,
   "buffer_font_weight": 300,
   "buffer_line_height": "standard",
-  "agent_buffer_font_size": 17,
-  "agent_ui_font_size": 17,
+  "agent_buffer_font_size": 15,
+  "agent_ui_font_size": 15,
 
   // Control which items are shown/hidden in the title bar
   "title_bar": {
@@ -98,17 +98,20 @@
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
         { "code_action": "source.fixAll.ruff" },
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        }
+        { "language_server": { "name": "ruff" } }
       ]
     }
   },
 
   // LSP settings
   "lsp": {
+    "ty": {
+      "settings": {
+        "experimental": {
+          "rename": true
+        }
+      }
+    },
     "basedpyright": {
       "settings": {
         "basedpyright": {
