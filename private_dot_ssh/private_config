@@ -6,10 +6,10 @@ Host souk
   AddKeysToAgent yes
   ForwardAgent yes
 
-Host nersc perlmutter saul
+Host perlmutter nersc
   HostName perlmutter.nersc.gov
 
-Host perlmutter*.nersc.gov saul*.nersc.gov dtn*.nersc.gov *.nersc.gov
+Host perlmutter*.nersc.gov dtn*.nersc.gov *.nersc.gov
   User sbiquard
   LogLevel QUIET
   IdentityFile ~/.ssh/nersc
@@ -23,8 +23,6 @@ Host nid??????
   LogLevel QUIET
   IdentityFile ~/.ssh/nersc
   StrictHostKeyChecking no
-  ControlMaster auto
-  ControlPath ~/.ssh/cm/%C.compute.sock
   ProxyJump perlmutter.nersc.gov
   Hostname %h
   SetEnv TERM=xterm-256color

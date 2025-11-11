@@ -7,6 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ssh_connections": [
+    {
+      "host": "nersc",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/global/homes/s/sbiquard"
+          ]
+        },
+        {
+          "paths": [
+            "/global/homes/s/sbiquard/repos/furax"
+          ]
+        }
+      ]
+    }
+  ],
   "base_keymap": "VSCode",
 
   // Themes
