@@ -7,24 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "ssh_connections": [
-    {
-      "host": "nersc",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/global/homes/s/sbiquard"
-          ]
-        },
-        {
-          "paths": [
-            "/global/homes/s/sbiquard/repos/furax"
-          ]
-        }
-      ]
-    }
-  ],
   "base_keymap": "VSCode",
 
   // Themes
@@ -70,6 +52,20 @@
     "show": "auto"
   },
 
+  // Terminal settings
+  "terminal": {
+    "font_weight": 300, // same as editor
+    "line_height": "standard",
+    "env": {
+      "TERM": "xterm-256color",
+      "EDITOR": "zed --wait" // use zed as the editor
+    },
+    "shell": { "program": "fish" },
+    "detect_venv": {
+      "on": { "activate_script": "fish" }
+    }
+  },
+
   // Copilot settings
   "agent": {
     "default_profile": "write",
@@ -80,19 +76,6 @@
   },
   "features": {
     "edit_prediction_provider": "copilot"
-  },
-
-  // Terminal settings
-  "terminal": {
-    "line_height": "standard",
-    "env": {
-      "TERM": "xterm-256color",
-      "EDITOR": "zed --wait" // use zed as the editor
-    },
-    "shell": { "program": "fish" },
-    "detect_venv": {
-      "on": { "activate_script": "fish" }
-    }
   },
 
   // Editor settings
@@ -157,5 +140,21 @@
   "telemetry": {
     "diagnostics": false,
     "metrics": false
-  }
+  },
+
+  // SSH
+  "ssh_connections": [
+    {
+      "host": "nersc",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/global/homes/s/sbiquard"]
+        },
+        {
+          "paths": ["/global/homes/s/sbiquard/repos/furax"]
+        }
+      ]
+    }
+  ]
 }
