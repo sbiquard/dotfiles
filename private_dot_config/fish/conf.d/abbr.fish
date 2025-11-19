@@ -2,7 +2,6 @@
 
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
-abbr -a code codium
 abbr -a py python
 abbr -a zj zellij
 abbr -a lg lazygit
@@ -13,6 +12,3 @@ abbr -a l ls -lah
 abbr -a lsa ls -lah
 abbr -a la ls -lAh
 abbr -a ll ls -lh
-
-# default to tectonic V2 CLI
-abbr -a tectonic tectonic -X
