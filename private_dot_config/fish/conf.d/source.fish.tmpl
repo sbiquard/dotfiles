@@ -4,12 +4,6 @@ bass source ~/.profile
 # zoxide
 zoxide init fish | source
 
-# environment modules
-source {{ .modulespath }}/init/fish
-{{- if eq .chezmoi.hostname "apcnb2205" }}
-module use ~/intel-oneapi-modulefiles
-{{- end }}
-
 # fzf key bindings
 fzf --fish | source
 
