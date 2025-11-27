@@ -5,6 +5,8 @@ Host souk
   User sbiquard
   AddKeysToAgent yes
   ForwardAgent yes
+  ServerAliveInterval 600
+  SetEnv TERM=xterm-256color
 
 Host perlmutter nersc
   HostName perlmutter.nersc.gov
