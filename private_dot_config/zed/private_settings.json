@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "base_keymap": "VSCode",
+  "helix_mode": true,
 
   // Themes
   "theme": {
