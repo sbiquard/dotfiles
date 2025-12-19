@@ -9,7 +9,18 @@
 {
   "base_keymap": "VSCode",
   "helix_mode": true,
+
+  // AI
   "disable_ai": true,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    }
+  },
 
   // Themes
   "theme": {
@@ -26,6 +37,9 @@
   "buffer_font_size": 18,
   "buffer_font_weight": 500,
   "buffer_line_height": { "custom": 1.4 }, // standard is 1.3
+  "buffer_font_features": {
+    "calt": false
+  },
   "agent_buffer_font_size": 16,
   "agent_ui_font_size": 16,
 
@@ -70,6 +84,7 @@
 
   // Editor settings
   "format_on_save": "off",
+  "colorize_brackets": true,
 
   // Syntax highlighting
   "file_types": {
@@ -79,6 +94,7 @@
   // Python settings
   "languages": {
     "Python": {
+      "show_edit_predictions": true,
       "language_servers": [
         // Disable basedpyright and enable Ty, and otherwise
         // use the default configuration (includes Ruff).
