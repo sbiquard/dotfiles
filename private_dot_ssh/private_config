@@ -2,6 +2,7 @@
 
 Host souk
   HostName universe.souk.ac.uk
+  AddressFamily inet
   User sbiquard
   AddKeysToAgent yes
   ForwardAgent yes
