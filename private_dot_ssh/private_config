@@ -7,6 +7,9 @@ Host souk
   AddKeysToAgent yes
   ForwardAgent yes
   ServerAliveInterval 600
+  ControlMaster auto
+  ControlPath ~/.ssh/control-%r@%h:%p
+  ControlPersist 6h
   SetEnv TERM=xterm-256color
 
 Host perlmutter nersc
