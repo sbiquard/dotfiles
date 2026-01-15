@@ -63,6 +63,11 @@
   // Project panel
   "project_panel": { "entry_spacing": "standard" },
 
+  // Git panel
+  "git_panel": {
+    "tree_view": true,
+  },
+
   // Minimap
   "minimap": {
     "show": "auto",
