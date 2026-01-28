@@ -51,12 +51,12 @@ Host jean-zay jz
   SetEnv TERM=xterm-256color
 
 Host nobel
+    HostName %h.princeton.edu
+    User sb1860
+
+Host tiger
   Hostname %h.princeton.edu
   User sb1860
-
-Host simons1
-  Hostname %h.princeton.edu
-  User sbiquard
   ProxyJump nobel
   ControlPath ~/.ssh/control-%r@%h:%p
   ControlMaster auto
