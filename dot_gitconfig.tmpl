@@ -4,7 +4,6 @@
 	signingkey = {{ .gitsigningkey }}
 [core]
 	editor = hx
-	pager = delta
 [init]
 	defaultbranch = main
 [commit]
@@ -33,15 +32,17 @@
 [pull]
 	rebase = true
 {{- if eq .chezmoi.hostname "tour-simon-camille" }}
-[credential]
-	credentialStore = gpg
-	helper = /usr/local/bin/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-{{- end }}
+[core]
+	pager = delta
 [interactive]
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
 [merge]
 	conflictStyle = zdiff3
+[credential]
+	credentialStore = gpg
+	helper = /usr/local/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+{{- end }}
