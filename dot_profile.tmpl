@@ -10,12 +10,4 @@ export PATH=$HOME/.local/bin:$PATH
 export CARGO_HOME="$HOME/.cargo"
 export PATH=$HOME/.cargo/bin:$PATH
 
-# Homebrew
-export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
-
-# TeX Live
-export PATH={{ .texlivepath }}/bin/x86_64-linux:$PATH
-export MANPATH={{ .texlivepath }}/texmf-dist/doc/man:$MANPATH
-export INFOPATH={{ .texlivepath }}/texmf-dist/doc/info:$INFOPATH
-
 . "$HOME/.cargo/env"
