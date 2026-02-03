@@ -7,19 +7,27 @@
 // from the command palette.
 [
   {
+    "bindings": {
+      "ctrl-alt-c": [
+        "agent::NewExternalAgentThread",
+        { "agent": "claude_code" },
+      ],
+    },
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "ctrl-shift-g": [
         "task::Spawn",
-        { "task_name": "LazyGit", "reveal_target": "center" }
-      ]
+        { "task_name": "LazyGit", "reveal_target": "center" },
+      ],
       // "shift shift": "file_finder::Toggle"
-    }
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"
-    }
-  }
+    },
+  },
 ]
