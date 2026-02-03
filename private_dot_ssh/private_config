@@ -50,14 +50,9 @@ Host jean-zay jz
   ProxyJump apcssh
   SetEnv TERM=xterm-256color
 
-Host nobel
-    HostName %h.princeton.edu
-    User sb1860
-
 Host tiger
   Hostname %h.princeton.edu
   User sb1860
-  ProxyJump nobel
   ControlPath ~/.ssh/control-%r@%h:%p
   ControlMaster auto
   ControlPersist 10m
