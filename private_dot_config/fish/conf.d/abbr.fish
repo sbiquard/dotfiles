@@ -5,7 +5,7 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr -a py python
 abbr -a zj zellij
 abbr -a lg lazygit
-abbr -a vnv --function activate_venv
+abbr -a va --function activate_venv
 
 # ls shortcuts
 abbr -a l ls -lah
