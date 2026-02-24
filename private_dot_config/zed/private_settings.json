@@ -22,7 +22,7 @@
   "icon_theme": "Material Icon Theme",
 
   // Fonts
-  "ui_font_family": ".SystemUIFont",
+  "ui_font_family": "Adwaita Sans",
   "ui_font_size": 18,
   "buffer_font_family": "VictorMono Nerd Font",
   "buffer_font_size": 18,
