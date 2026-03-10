@@ -1,6 +1,16 @@
+# Shell Command
+command = /usr/bin/fish --interactive
+
+# Appearance
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
 font-family = "VictorMono NF SemiBold"
 font-size = 13
+
+# Window
 window-height = 32
 window-width = 120
-command = /usr/bin/fish --interactive
-theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+
+# Command Finished Notifications
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = no-bell,notify
+notify-on-command-finish-after = 10s
