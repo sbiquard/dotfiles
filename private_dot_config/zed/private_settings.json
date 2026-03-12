@@ -92,11 +92,11 @@
     "Python": {
       "show_edit_predictions": true,
       "language_servers": [
-        // Disable basedpyright and enable ty, and otherwise
-        // use the default configuration (includes Ruff).
         "ty",
+        "ruff",
         "!basedpyright",
-        "...",
+        "!pyright",
+        "!pylsp",
       ],
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
