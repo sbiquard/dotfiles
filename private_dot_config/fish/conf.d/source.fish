@@ -16,3 +16,6 @@ uvx --generate-shell-completion fish | source
 
 # prompt
 starship init fish | source
+
+# prek completions
+COMPLETE=fish prek | source
