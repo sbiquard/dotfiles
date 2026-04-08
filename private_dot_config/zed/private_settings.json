@@ -107,6 +107,12 @@
 
   // LSP settings
   "lsp": {
+    "tinymist": {
+      "settings": {
+        "exportPdf": "onSave",
+        "outputPath": "$root/$name",
+      },
+    },
     "texlab": {
       "settings": {
         "texlab": {
@@ -143,7 +149,7 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/cephfs/soukdata/user_data/sbiquard/analysis"],
+          "paths": ["/shared_home/sbiquard/work/sat-analysis"],
         },
       ],
     },
