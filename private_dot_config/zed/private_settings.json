@@ -12,6 +12,11 @@
 
   // AI
   "disable_ai": false,
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
 
   // Themes
   "theme": {
@@ -91,13 +96,7 @@
   "languages": {
     "Python": {
       "show_edit_predictions": true,
-      "language_servers": [
-        "ty",
-        "ruff",
-        "!basedpyright",
-        "!pyright",
-        "!pylsp",
-      ],
+      "language_servers": ["ty", "ruff", "!basedpyright", "!pyright", "!pylsp"],
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
         { "code_action": "source.fixAll.ruff" },

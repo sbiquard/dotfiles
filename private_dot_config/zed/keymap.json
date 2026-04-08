@@ -10,7 +10,7 @@
     "bindings": {
       "ctrl-alt-c": [
         "agent::NewExternalAgentThread",
-        { "agent": "claude_code" },
+        { "agent": { "custom": { "name": "claude-acp" } } },
       ],
     },
   },
