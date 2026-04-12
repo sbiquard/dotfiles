@@ -1,14 +1,19 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "a1b678d"
-hash = "9dce00232a0e0e2502565c7aa2b0ed4e"
+rev = "babfd0f"
+hash = "6fa6a05a81c98dd000fbca3cca6e9682"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-paste"
+rev = "babfd0f"
+hash = "3f8d49413bc8691b4c652eb417a20178"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "c023460"
-hash = "2ac87e1b3a61f5887472899e86535d29"
+rev = "0670801"
+hash = "7dfe41c9c3d9be76da8a844263d0bbed"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "c023460"
-hash = "5dffea1e87c50b18b8bb1599f6d4881a"
+rev = "0670801"
+hash = "b8f46853c27707115f25f3423a47bd38"
