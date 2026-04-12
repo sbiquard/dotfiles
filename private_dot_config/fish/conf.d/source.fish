@@ -7,9 +7,6 @@ zoxide init fish | source
 # fzf key bindings
 fzf --fish | source
 
-# jj completions
-jj util completion fish | source
-
 # uv completions
 uv generate-shell-completion fish | source
 uvx --generate-shell-completion fish | source
