@@ -2,7 +2,7 @@
 command = /usr/bin/fish --interactive
 
 # Appearance
-theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 font-family = "VictorMono NF SemiBold"
 font-size = 13
 

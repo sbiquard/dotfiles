@@ -21,7 +21,7 @@
   // Themes
   "theme": {
     "mode": "system",
-    "dark": "Catppuccin Frappé - No Italics",
+    "dark": "Catppuccin Mocha - No Italics",
     "light": "Catppuccin Latte - No Italics",
   },
   "icon_theme": "Material Icon Theme",
