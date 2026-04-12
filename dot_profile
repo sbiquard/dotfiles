@@ -5,9 +5,3 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # PATH
 export PATH=$HOME/.local/bin:$PATH
-
-# Cargo
-export CARGO_HOME="$HOME/.cargo"
-export PATH=$HOME/.cargo/bin:$PATH
-
-. "$HOME/.cargo/env"
