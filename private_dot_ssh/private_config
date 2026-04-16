@@ -1,6 +1,6 @@
 # Read more about SSH config files: https://linux.die.net/man/5/ssh_config
 
-Host souk
+Host universe
   HostName universe.souk.ac.uk
   AddressFamily inet
   User sbiquard
