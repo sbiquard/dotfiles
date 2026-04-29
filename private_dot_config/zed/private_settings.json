@@ -8,20 +8,29 @@
 // from the command palette or from `Zed` application menu.
 {
   "base_keymap": "VSCode",
+
+  // Editor settings
+  "format_on_save": "off",
+  "colorize_brackets": true,
   "helix_mode": true,
 
   // AI
-  "disable_ai": false,
+  "disable_ai": true,
   "agent_servers": {
     "claude-acp": {
       "type": "registry",
     },
   },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
 
   // Themes
   "theme": {
     "mode": "system",
-    "dark": "Catppuccin Mocha - No Italics",
+    "dark": "Catppuccin Frappé - No Italics",
     "light": "Catppuccin Latte - No Italics",
   },
   "icon_theme": "Material Icon Theme",
@@ -41,11 +50,12 @@
 
   // Control which items are shown/hidden in the title bar
   "title_bar": {
-    "show_branch_icon": true,
+    "show_branch_status_icon": true,
     "show_sign_in": false,
   },
 
   // Other UI settings
+  "diff_view_style": "split",
   "scrollbar": { "cursors": false },
   "tabs": {
     "file_icons": true,
@@ -55,19 +65,11 @@
     "left_padding": 0.15,
     "right_padding": 0.15,
   },
-
-  // Project panel
-  "project_panel": { "entry_spacing": "standard" },
-
-  // Git panel
-  "git_panel": {
-    "tree_view": true,
-  },
-
-  // Minimap
-  "minimap": {
-    "show": "auto",
-  },
+  "project_panel": { "dock": "left", "entry_spacing": "standard" },
+  "git_panel": { "dock": "left", "tree_view": true },
+  "outline_panel": { "dock": "left" },
+  "collaboration_panel": { "dock": "left", "button": false },
+  "minimap": { "show": "auto" },
 
   // Terminal settings
   "terminal": {
@@ -82,10 +84,6 @@
       "on": { "activate_script": "fish" },
     },
   },
-
-  // Editor settings
-  "format_on_save": "off",
-  "colorize_brackets": true,
 
   // Syntax highlighting
   "file_types": {
